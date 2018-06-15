@@ -1,0 +1,4 @@
+C:\Users\Matthew.Webber\Documents\Visual Studio 2017\Projects\GooglePushNotificationTest\GooglePushNotificationTest.Console\obj\Debug\netcoreapp2.0\GooglePushNotificationTest.Console.csprojResolveAssemblyReference.cache
+C:\Users\Matthew.Webber\Documents\Visual Studio 2017\Projects\GooglePushNotificationTest\GooglePushNotificationTest.Console\obj\Debug\netcoreapp2.0\GooglePushNotificationTest.Console.csproj.CoreCompileInputs.cache
+C:\Users\Matthew.Webber\Documents\Visual Studio 2017\Projects\GooglePushNotificationTest\GooglePushNotificationTest.Console\obj\Debug\netcoreapp2.0\GooglePushNotificationTest.Console.AssemblyInfoInputs.cache
+C:\Users\Matthew.Webber\Documents\Visual Studio 2017\Projects\GooglePushNotificationTest\GooglePushNotificationTest.Console\obj\Debug\netcoreapp2.0\GooglePushNotificationTest.Console.AssemblyInfo.cs

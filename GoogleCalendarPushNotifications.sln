@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GooglePushNotificationTest.Web", "GooglePushNotificationTest.Web\GooglePushNotificationTest.Web.csproj", "{0BACDED5-C847-4B80-BFDE-C7BF9A0A4C6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleCalendarPushNotifications.Web", "GoogleCalendarPushNotifications.Web\GoogleCalendarPushNotifications.Web.csproj", "{0BACDED5-C847-4B80-BFDE-C7BF9A0A4C6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GooglePushNotificationTest.Console", "GooglePushNotificationTest.Console\GooglePushNotificationTest.Console.csproj", "{C9CDA92A-EC45-4C26-BECA-EF0A2BC330A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleCalendarPushNotifications.App", "GoogleCalendarPushNotifications.App\GoogleCalendarPushNotifications.App.csproj", "{C9CDA92A-EC45-4C26-BECA-EF0A2BC330A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

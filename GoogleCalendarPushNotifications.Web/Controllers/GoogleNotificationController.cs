@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace GooglePushNotificationTest.Web.Controllers
+namespace GoogleCalendarPushNotifications.Web.Controllers
 {
     [Route("api/googlenotifications/")]
     public class GoogleNotificationController : Controller

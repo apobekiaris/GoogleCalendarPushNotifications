@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Threading.Tasks;
 
-namespace GooglePushNotificationTest.App
+namespace GoogleCalendarPushNotifications.App
 {
     public class Program
     {
@@ -12,8 +13,9 @@ namespace GooglePushNotificationTest.App
         private const string GoogleEventChannelUrl = "https://www.googleapis.com/apiName/apiVersion/resourcePath/watch";
         private const string ReceivingUrl = "http://mywebsite.com/api/googlenotification/events";
 
+        public static void Main(string[] args) => MainAsync(args).GetAwaiter().GetResult();
 
-        public static async void Main(string[] args)
+        private static async Task MainAsync(string[] args)
         {
             var values = new Dictionary<string, string>()
             {

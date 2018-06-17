@@ -5,7 +5,6 @@ namespace GoogleCalendarPushNotifications.App
 {
     public class Program
     {
-
         public static async Task Main(string[] args)
         {
             var service = new GoogleServiceWrapper();

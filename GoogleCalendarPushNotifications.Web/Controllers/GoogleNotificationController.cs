@@ -6,14 +6,18 @@ namespace GoogleCalendarPushNotifications.Web.Controllers
     public class GoogleNotificationController : Controller
     {
         public GoogleNotificationController()
-        {
+        { }
 
-        }
-
+        /// <summary>
+        /// Receiving endpoint for Google Calendar push notifications.
+        /// </summary>
+        /// <returns>IActionResult</returns>
         [HttpPost("events")]
-        public string Post(int id)
+        public IActionResult Post()
         {
-            return "value";
+            var headers = HttpContext.Request.Headers;
+
+            return new OkResult();
         }
     }
 }

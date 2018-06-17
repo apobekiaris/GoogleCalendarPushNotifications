@@ -26,7 +26,6 @@ namespace GoogleCalendarPushNotifications.App
                     Console.WriteLine(Constants.DeregisterChannel);
                     Console.ReadKey();
 
-
                     // Attempting to deregister the push notification channel.
                     success = await service.DeregisterPushNotificationChannel();
                     Console.WriteLine();

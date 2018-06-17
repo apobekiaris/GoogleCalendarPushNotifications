@@ -1,39 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace GoogleCalendarPushNotifications.App
 {
     public class Program
     {
-        private static readonly HttpClient Client = new HttpClient();
 
-        private const string ChannelCreatedSuccessfully = "Channel created successfully";
-        private const string GoogleEventChannelUrl = "https://www.googleapis.com/apiName/apiVersion/resourcePath/watch";
-        private const string ReceivingUrl = "http://mywebsite.com/api/googlenotification/events";
-
-        public static void Main(string[] args) => MainAsync(args).GetAwaiter().GetResult();
-
-        private static async Task MainAsync(string[] args)
+        public static async Task Main(string[] args)
         {
-            var values = new Dictionary<string, string>()
+            var service = new GoogleServiceWrapper();
+
+            // Attempting to authenticate with Google Calendar api.
+            bool success = await service.InitialiseService();
+            Console.WriteLine(success ? Constants.GoogleAuthenticationSuccess : Constants.GoogleAuthenticationFailure);
+
+            if (success)
             {
-                { "Id", Guid.NewGuid().ToString() },
-                { "Type", "web_hook" },
-                { "Address", ReceivingUrl }
-            };
+                // Attempting to register a push notification channel for receiving event change notifications.
+                success = await service.RegisterPushNotificationChannel();
+                Console.WriteLine(success ? Constants.RegisterChannelSuccess : Constants.RegisterChannelFailure);
 
-            var content = new FormUrlEncodedContent(values);
+                if (success)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(Constants.DeregisterChannel);
+                    Console.ReadKey();
 
-            var response = await Client.PostAsync(GoogleEventChannelUrl, content);
 
-            if (response.IsSuccessStatusCode)
-            {
-                Console.WriteLine("Channel created successfully.");
+                    // Attempting to deregister the push notification channel.
+                    success = await service.DeregisterPushNotificationChannel();
+                    Console.WriteLine();
+                    Console.WriteLine(success ? Constants.DeregisterChannelSuccess : Constants.DeregisterChannelFailure);
+                }
             }
 
-            Console.WriteLine("Press any key to terminate...");
+            Console.WriteLine(Constants.TerminateProgram);
             Console.ReadKey();
         }
     }
